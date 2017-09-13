@@ -1,5 +1,5 @@
 '''
-Script provides orchestration of fmcapi
+Script provides migration of ASA configs to FMC.
 '''
 
 from fmcapi.fmcapi import * #to execute from cli
