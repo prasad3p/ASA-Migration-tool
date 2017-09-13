@@ -6,7 +6,6 @@ from fmcapi.fmcapi import * #to execute from cli
 #from fmcapi import * #to execute from pycharm
 import pyclbr
 import logging
-#from netaddr import IPAddress
 
 #################################################### Variables #########################################################
 
@@ -22,8 +21,7 @@ hdlr.setFormatter(formatter)
 logger.addHandler(hdlr)
 logger.setLevel(logging.DEBUG)
 groupMap = {}
-#test comment
-#TEST COMMENT 2
+
 ############################################## Defns of supporting functions ###########################################
 
 #Returns a list of all the available objects defined in the file api_objects.py
@@ -34,7 +32,6 @@ def getAvailabeObjects():
 
     for item in module_info.values():
         if(item.name != "APIClassTemplate"):
-            #print(item.name)
             objectList.append(item.name)
 
     #logger.info("List of available objects imported in the code.")
@@ -47,54 +44,6 @@ def printAvailableObjects(objectList):
     for obj in objectList:
         print("%d. %s"%(num,obj))
         num +=1
-
-#Validate user inputs. Function can be extended with possible test cases.
-'''
-def validateUserInput(userInput,objectList):
-
-    userObjectSplits = userInput.split()
-    if(len(userObjectSplits) == 0):
-        #print("Incorrect inputs")
-        logger.error("Incorrect inputs")
-        return False
-
-    elif(len(userObjectSplits) != 2):
-        #print("Incorrect inputs")
-        logger.error("Incorrect inputs")
-        return False
-
-    if(userObjectSplits[0].upper() not in ["GET","POST","DELETE","PUT"]):
-        #print("Incorrect method name")
-        logger.error("Incorrect method name")
-        return False
-
-    if(not(userObjectSplits[1] in objectList)):
-        #print("Object is unavailable")
-        logger.error("Object is unavailable")
-        printAvailableObjects(objectList)
-        return False
-
-    return True
-'''
-#Returns FMC connection info.
-'''def readFMCConfig():
-    myCreds = {}
-    myfile = open(fmcConfigFile, "r")
-    for line in myfile:
-        line = line.strip()
-        if not line:  # line is blank
-            #print("Username pwd read from file.")
-            logger.info("Username password read from fmc config file.")
-            break
-        if line.startswith("#"):  # comment line
-            continue
-        name, var = line.split(":")
-        if (((name != "BEGIN") and (name != "END"))):
-            myCreds[name] = var
-
-    logger.debug("Returning fmc config info.")
-    return myCreds
-'''
 
 def maskConvert(mask):
     maskSplits = mask.split(".")
@@ -122,6 +71,7 @@ def doPost():
                 line = myfile.readline()
                 objSplits = line.split(" ")
                 id = objSplits[1].strip() #id is either host or subnet
+
             except:
                 logger.error("Configuration file error in line: "+line.strip())
                 exit()
@@ -132,9 +82,6 @@ def doPost():
                 iphost1.post()
                 del iphost1
 
-                #logger.info("Host "+objname+" posted onto FMC.")
-
-
             else:           #if id is subnet
                 value = objSplits[2].strip()#ip address
                 preMask = objSplits[3].strip() #mask in x.x.x.x format
@@ -143,8 +90,6 @@ def doPost():
                 ipnet1 = IPNetwork(fmc=fmc1, name=objname, value=ip)
                 ipnet1.post()
                 del ipnet1
-
-                #logger.info("Network "+objname+" posted onto FMC.")
 
             line = myfile.readline()
 
@@ -179,15 +124,11 @@ def doPost():
                 objList.append(subObjName)
 
                 obj1.named_networks(action='add', name=subObjName)
-
-                #logger.info("Object "+subObjName+ " added to the group "+ objname)
                 line = myfile.readline()
 
 
             obj1.post()
             del obj1
-
-            #logger.info("Group "+objname+" posted onto FMC.")
 
         elif(line.startswith("object service")):
 
@@ -208,7 +149,6 @@ def doPost():
             del pport1
 
             line = myfile.readline()
-            #logger.info("Service "+objname+" posted onto FMC.")
 
         elif (line.startswith("access-list")):
 
@@ -231,8 +171,6 @@ def doPost():
 
             acp1 = AccessControlPolicy(fmc=fmc1, name=policyName)
             acp1.post()
-            #logger.info("Access policy " +acp1.name+  " is created and posted on FMC successfully.")
-
             time.sleep(1)
             rulNum = 1
             portNum = 1
@@ -270,7 +208,6 @@ def doPost():
                             portVal = lineSplits[10].strip()
 
                             if line.__contains__(" range "):
-                                #print ("Port range not supported.")
                                 raise Exception ("Port range not supported.")
 
                             if portVal.isnumeric():
@@ -318,7 +255,6 @@ def doPost():
                             acprule1.sendEventsToFMC = True
 
                         acprule1.post()
-                        #logger.info("Rule: "+acprule1.name+" created and posted under policy "+acp1.name+" onto FMC successfully.")
                         time.sleep(1)
 
                 except:
@@ -355,9 +291,6 @@ def doPost():
             break
 
 ####################################################### Main ###########################################################
-
-#objectList = getAvailabeObjects()
-#printAvailableObjects(objectList)
 
 #Accept user inputs and validate
 ipaddress = input("Enter IP address of FMC:")
