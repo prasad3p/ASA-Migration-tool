@@ -23,7 +23,7 @@ logger.addHandler(hdlr)
 logger.setLevel(logging.DEBUG)
 groupMap = {}
 #test comment
-
+#TEST COMMENT 2
 ############################################## Defns of supporting functions ###########################################
 
 #Returns a list of all the available objects defined in the file api_objects.py
