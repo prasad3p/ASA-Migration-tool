@@ -22,6 +22,7 @@ hdlr.setFormatter(formatter)
 logger.addHandler(hdlr)
 logger.setLevel(logging.DEBUG)
 groupMap = {}
+#test comment
 
 ############################################## Defns of supporting functions ###########################################
 
