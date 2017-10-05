@@ -1,0 +1,54 @@
+2017-09-14 10:39:40,345 INFO FMC Connection was successful.
+2017-09-14 10:39:56,889 ERROR Configuration NOT SUPPORTED in line: object-group service dmz-rule-694-services
+2017-09-14 10:39:56,890 ERROR Configuration NOT SUPPORTED in line: service-object object ESP
+2017-09-14 10:39:56,890 ERROR Configuration NOT SUPPORTED in line: service-object object IKE
+2017-09-14 10:40:34,546 WARNING No port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-09-14 10:40:42,277 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test5 extended permit object-group portGroup object-group insideNets object-group AllHosts
+2017-09-14 10:40:51,598 WARNING No port configured for the rule: ACP_test8_Rule2 in line:access-list ACP_test8 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-09-14 10:40:58,039 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test9 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-09-14 10:41:01,519 WARNING No port configured for the rule: ACP_test11_Rule1 in line:access-list ACP_test11 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-09-15 12:37:30,020 INFO FMC Connection was successful.
+2017-09-15 12:37:33,565 ERROR Configuration NOT SUPPORTED in line: object-group service dmz-rule-694-services
+2017-09-15 12:37:33,565 ERROR Configuration NOT SUPPORTED in line: service-object object ESP
+2017-09-15 12:37:33,565 ERROR Configuration NOT SUPPORTED in line: service-object object IKE
+2017-09-15 12:37:50,799 WARNING No port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-09-15 12:37:54,747 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test5 extended permit object-group portGroup object-group insideNets object-group AllHosts
+2017-09-15 12:37:59,722 WARNING No port configured for the rule: ACP_test8_Rule2 in line:access-list ACP_test8 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-09-15 12:38:03,120 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test9 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-09-15 12:38:04,787 WARNING No port configured for the rule: ACP_test11_Rule1 in line:access-list ACP_test11 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-10-02 11:21:06,300 INFO FMC Connection was successful.
+2017-10-02 11:21:20,689 ERROR Configuration NOT SUPPORTED in line: object-group service dmz-rule-694-services
+2017-10-02 11:21:20,690 ERROR Configuration NOT SUPPORTED in line: service-object object ESP
+2017-10-02 11:21:20,690 ERROR Configuration NOT SUPPORTED in line: service-object object IKE
+2017-10-02 11:21:54,922 WARNING No port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-10-02 11:22:01,707 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test5 extended permit object-group portGroup object-group insideNets object-group AllHosts
+2017-10-02 11:22:10,239 WARNING No port configured for the rule: ACP_test8_Rule2 in line:access-list ACP_test8 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-10-02 11:22:16,404 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test9 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-10-02 11:22:19,754 WARNING No port configured for the rule: ACP_test11_Rule1 in line:access-list ACP_test11 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-10-04 16:17:16,389 INFO FMC Connection was successful.
+2017-10-04 17:14:52,716 INFO FMC Connection was successful.
+2017-10-04 17:20:57,671 INFO FMC Connection was successful.
+2017-10-04 17:28:13,977 INFO FMC Connection was successful.
+2017-10-04 17:37:01,439 INFO FMC Connection was successful.
+2017-10-05 11:40:47,544 INFO FMC Connection was successful.
+2017-10-05 12:47:43,125 INFO FMC Connection was successful.
+2017-10-05 12:51:43,725 INFO FMC Connection was successful.
+2017-10-05 13:57:15,977 INFO FMC Connection was successful.
+2017-10-05 13:58:42,088 INFO FMC Connection was successful.
+2017-10-05 14:01:08,760 INFO FMC Connection was successful.
+2017-10-05 14:03:59,307 INFO FMC Connection was successful.
+2017-10-05 14:05:06,948 INFO FMC Connection was successful.
+2017-10-05 14:06:38,242 INFO FMC Connection was successful.
+2017-10-05 14:08:00,804 INFO FMC Connection was successful.
+2017-10-05 14:10:10,294 INFO FMC Connection was successful.
+2017-10-05 14:17:24,869 INFO FMC Connection was successful.
+2017-10-05 14:23:17,634 INFO FMC Connection was successful.
+2017-10-05 15:19:11,299 INFO FMC Connection was successful.
+2017-10-05 15:23:00,535 INFO FMC Connection was successful.
+2017-10-05 15:25:23,139 INFO FMC Connection was successful.
+2017-10-05 15:40:17,506 INFO FMC Connection was successful.
+2017-10-05 15:41:09,742 WARNING No port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-10-05 15:41:16,612 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test5 extended permit object-group portGroup object-group insideNets object-group AllHosts
+2017-10-05 15:41:24,958 WARNING No port configured for the rule: ACP_test8_Rule2 in line:access-list ACP_test8 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-10-05 15:41:31,336 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test9 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-10-05 15:41:34,414 WARNING No port configured for the rule: ACP_test11_Rule1 in line:access-list ACP_test11 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive

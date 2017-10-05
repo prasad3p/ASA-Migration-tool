@@ -57,13 +57,17 @@ def doPost():
 
     myfile = open(configFile, "r")
     line = myfile.readline()
+    needNext = 0
 
     while 1:
 
-        if not line : break
-        if line.startswith("#") : continue
+        line = line.strip()
+        print (line)
 
-        if(line.startswith("object network")):
+        if (line.startswith("#")) :
+            needNext = 1
+
+        elif(line.startswith("object network")):
 
             try:
                 nameSplit = line.split(" ")
@@ -91,7 +95,8 @@ def doPost():
                 ipnet1.post()
                 del ipnet1
 
-            line = myfile.readline()
+            needNext=1
+            #line = myfile.readline()
 
         elif(line.startswith("object-group network")):
 
@@ -126,7 +131,7 @@ def doPost():
                 obj1.named_networks(action='add', name=subObjName)
                 line = myfile.readline()
 
-
+            needNext = 0
             obj1.post()
             del obj1
 
@@ -148,7 +153,7 @@ def doPost():
             pport1.post()
             del pport1
 
-            line = myfile.readline()
+            needNext = 1
 
         elif (line.startswith("access-list")):
 
@@ -265,13 +270,71 @@ def doPost():
                     spl = line.split(" ")
                     policyName1 = spl[1].strip()
                     if(policyName1 != temp):
+                        needNext = 0
                         break
                 else:
+                    needNext = 0
                     break
+
+        elif (line.startswith("object-group service")):
+
+            try:
+                nameSplit = line.split(" ")
+                objname = nameSplit[2].strip()  # Name of the group
+            except:
+                logger.error("Configuration file error in line: " + line.strip())
+                exit()
+
+            obj1 = ProtocolPortObjectGroups(fmc=fmc1, name=objname)
+            line = myfile.readline()
+
+           # if nameSplit.count() == 4:
+               # portType = nameSplit[3].strip()
+            i=0
+            while line.startswith(" "):  # read the file until you encounter next set of configs.
+                #entrySplits = line.split(" ")
+
+                if line.startswith(" group-object"):
+
+                    logger.error("group-object configuration under " + objname + " is NOT SUPPORTED in line: " + line.strip())
+                    line = myfile.readline()
+                    continue
+
+                if line.startswith(" service-object"):
+
+                    portSplits = line.split(" ")
+                    portName = portSplits[3].strip()
+                    obj1.named_ProtocolPortObjectGroups(action='add',name=portName)
+
+                if line.startswith(" port-object"):
+
+                    portSplits = line.split(" ")
+                    portVal = portSplits[3].strip()
+
+                    if portVal.isdigit():
+
+                        obj2 = ProtocolPort(fmc=fmc1)
+                        obj2.name = objname + i
+                        obj2.port = portVal
+                        #obj2.protocol = portType
+                        obj2.post()
+                        i = i+1
+                        time.sleep()
+                        obj1.named_ProtocolPortObjectGroups(action='add', name=obj2.name)
+
+                    else:
+
+                        logger.error("CONFIGURATION NOT SUPPORTED for line: "+line)
+
+                line = myfile.readline()
+
+            needNext = 0
+            obj1.post()
+            del obj1
 
         else:
             logger.error("Configuration NOT SUPPORTED in line: "+line.strip())
-            line = myfile.readline()
+            needNext = 1
 
         #fmcapi yet to be developed for service groups.
         #elif(line.startswith("object-group service")):
@@ -285,10 +348,13 @@ def doPost():
 
             if nameSplit[2] == "extended" or nameSplit[2] =="standard":
         '''
-        #line = myfile.readline()
+        if needNext == 1:
+            line = myfile.readline()
+            needNext = 0
+
         if not line:
             print("Please see the logfile "+logfile+" for error messages.")
-            break
+            exit()
 
 ####################################################### Main ###########################################################
 
