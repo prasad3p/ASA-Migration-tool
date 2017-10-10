@@ -52,3 +52,44 @@
 2017-10-05 15:41:24,958 WARNING No port configured for the rule: ACP_test8_Rule2 in line:access-list ACP_test8 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
 2017-10-05 15:41:31,336 WARNING Configuration NOT SUPPORTED in line: access-list ACP_test9 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
 2017-10-05 15:41:34,414 WARNING No port configured for the rule: ACP_test11_Rule1 in line:access-list ACP_test11 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-10-06 11:50:22,869 INFO FMC Connection was successful.
+2017-10-06 11:50:26,425 ERROR MIGRATION NOT SUPPORTED in line:  service-object tcp destination eq https
+
+2017-10-06 11:50:27,157 ERROR Configuration NOT SUPPORTED in line: and some crap that it doesnt support..
+2017-10-06 12:13:14,668 INFO FMC Connection was successful.
+2017-10-06 12:13:19,642 ERROR MIGRATION NOT SUPPORTED in line: port-object eq 1414
+2017-10-06 12:13:19,642 ERROR MIGRATION NOT SUPPORTED in line: port-object eq www
+2017-10-09 17:10:42,477 INFO FMC Connection was successful.
+2017-10-09 17:11:28,884 WARNING No single port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-10-09 17:11:35,182 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group portGroup object-group insideNets object-group AllHosts
+2017-10-09 17:11:45,873 WARNING No single port configured for the rule: ACP_test6_Rule2 in line:access-list ACP_test6 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-10-09 17:11:51,458 WARNING No single port configured for the rule: ACP_test7_Rule1 in line:access-list ACP_test7 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-10-09 17:11:57,986 WARNING No single port configured for the rule: ACP_test8_Rule1 in line:access-list ACP_test8 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive000 inactive
+2017-10-09 17:16:44,424 INFO FMC Connection was successful.
+2017-10-09 17:17:31,159 WARNING No single port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-10-09 17:17:37,696 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-09 17:17:48,935 WARNING No single port configured for the rule: ACP_test6_Rule2 in line:access-list ACP_test6 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-10-09 17:17:54,905 WARNING No single port configured for the rule: ACP_test7_Rule1 in line:access-list ACP_test7 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-10-09 17:18:01,034 WARNING No single port configured for the rule: ACP_test8_Rule1 in line:access-list ACP_test8 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-10-09 17:30:42,795 INFO FMC Connection was successful.
+2017-10-09 17:31:28,209 WARNING No single port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-10-09 17:31:34,635 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-09 17:31:45,582 WARNING No single port configured for the rule: ACP_test6_Rule2 in line:access-list ACP_test6 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-10-09 17:31:51,220 WARNING No single port configured for the rule: ACP_test7_Rule1 in line:access-list ACP_test7 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-10-09 17:31:57,002 WARNING No single port configured for the rule: ACP_test8_Rule1 in line:access-list ACP_test8 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-10-09 17:54:41,597 INFO FMC Connection was successful.
+2017-10-09 17:55:24,535 WARNING No single port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
+2017-10-09 17:55:30,566 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-09 17:55:41,645 WARNING No single port configured for the rule: ACP_test6_Rule2 in line:access-list ACP_test6 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
+2017-10-09 17:55:47,270 WARNING No single port configured for the rule: ACP_test7_Rule1 in line:access-list ACP_test7 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
+2017-10-09 17:55:53,058 WARNING No single port configured for the rule: ACP_test8_Rule1 in line:access-list ACP_test8 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
+2017-10-10 10:42:20,000 INFO FMC Connection was successful.
+2017-10-10 10:42:29,691 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-10 11:13:54,418 INFO FMC Connection was successful.
+2017-10-10 11:14:03,327 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-10 11:44:23,356 INFO FMC Connection was successful.
+2017-10-10 11:44:35,342 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-10 11:52:02,959 INFO FMC Connection was successful.
+2017-10-10 11:52:33,133 WARNING No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017-10-10 11:52:45,565 ERROR Configuration NOT SUPPORTED in line: 
+2017-10-10 11:52:45,565 ERROR Configuration NOT SUPPORTED in line: 

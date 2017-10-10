@@ -1,171 +1,54 @@
-2017/10/05-15:40:11 - INFO:fmc.py:310 - Requesting new tokens from https://10.82.7.82/api/fmc_platform/v1/auth/generatetoken.
-2017/10/05-15:40:15 - INFO:fmc.py:89 - Building base to URLs.
-2017/10/05-15:40:15 - INFO:fmc.py:168 - Collecting version information from FMC.
-2017/10/05-15:40:17 - INFO:fmc.py:175 - Populating vdbVersion, sruVersion, serverVersion, and geoVersion FMC instance variables.
-2017/10/05-15:40:17 - INFO:fmcOrchV1.2.py:368 - FMC Connection was successful.
-2017/10/05-15:40:18 - INFO:api_objects.py:91 - POST success. Object with name: "obj-10.1.1.0" and id: "000C29F1-03E7-0ed3-0000-008589935665" created in FMC.
-2017/10/05-15:40:19 - INFO:api_objects.py:91 - POST success. Object with name: "obj-10.1.2.0" and id: "000C29F1-03E7-0ed3-0000-008589935683" created in FMC.
-2017/10/05-15:40:20 - INFO:api_objects.py:91 - POST success. Object with name: "obj-10.1.3.0" and id: "000C29F1-03E7-0ed3-0000-008589935701" created in FMC.
-2017/10/05-15:40:21 - INFO:api_objects.py:91 - POST success. Object with name: "obj-Host-689" and id: "000C29F1-03E7-0ed3-0000-008589935719" created in FMC.
-2017/10/05-15:40:22 - INFO:api_objects.py:91 - POST success. Object with name: "obj-Host-690" and id: "000C29F1-03E7-0ed3-0000-008589935737" created in FMC.
-2017/10/05-15:40:23 - INFO:api_objects.py:91 - POST success. Object with name: "obj-Host-691" and id: "000C29F1-03E7-0ed3-0000-008589935755" created in FMC.
-2017/10/05-15:40:23 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:23 - INFO:api_objects.py:406 - Adding "obj-Host-689" to NetworkGroup.
-2017/10/05-15:40:23 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:24 - INFO:api_objects.py:403 - Adding "obj-Host-690" to NetworkGroup.
-2017/10/05-15:40:24 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:25 - INFO:api_objects.py:403 - Adding "obj-Host-691" to NetworkGroup.
-2017/10/05-15:40:25 - INFO:api_objects.py:91 - POST success. Object with name: "AllHosts" and id: "000C29F1-03E7-0ed3-0000-008589935773" created in FMC.
-2017/10/05-15:40:25 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:26 - INFO:api_objects.py:406 - Adding "obj-10.1.1.0" to NetworkGroup.
-2017/10/05-15:40:26 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:26 - INFO:api_objects.py:403 - Adding "obj-10.1.2.0" to NetworkGroup.
-2017/10/05-15:40:26 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:26 - INFO:api_objects.py:403 - Adding "obj-10.1.3.0" to NetworkGroup.
-2017/10/05-15:40:27 - INFO:api_objects.py:91 - POST success. Object with name: "insideNets" and id: "000C29F1-03E7-0ed3-0000-008589935791" created in FMC.
-2017/10/05-15:40:28 - INFO:api_objects.py:91 - POST success. Object with name: "TCP_6100" and id: "000C29F1-03E7-0ed3-0000-008589935809" created in FMC.
-2017/10/05-15:40:30 - INFO:api_objects.py:91 - POST success. Object with name: "TCP_1414" and id: "000C29F1-03E7-0ed3-0000-008589935827" created in FMC.
-2017/10/05-15:40:30 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:30 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:31, Gathered_Items:25
-2017/10/05-15:40:31 - INFO:api_objects.py:2080 - Adding "TCP_6100" to ProtocolPortObjectGroups.
-2017/10/05-15:40:31 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:32 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:31, Gathered_Items:25
-2017/10/05-15:40:32 - INFO:api_objects.py:2077 - Adding "TCP_1414" to ProtocolPortObjectGroups.
-2017/10/05-15:40:34 - INFO:api_objects.py:91 - POST success. Object with name: "dmz-rule-694-services" and id: "000C29F1-03E7-0ed3-0000-008589935845" created in FMC.
-2017/10/05-15:40:36 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test1" and id: "000C29F1-03E7-0ed3-0000-008589935863" created in FMC.
-2017/10/05-15:40:38 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test1" and id: "000C29F1-03E7-0ed3-0000-008589935863" fetched from FMC.
-2017/10/05-15:40:39 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:40:39 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:40:39 - INFO:api_objects.py:91 - POST success. Object with name: "Port_tcp_123" and id: "000C29F1-03E7-0ed3-0000-008589935961" created in FMC.
-2017/10/05-15:40:40 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:32, Gathered_Items:25
-2017/10/05-15:40:40 - INFO:api_objects.py:132 - GET success. Object with name: "Port_tcp_123" and id: "000C29F1-03E7-0ed3-0000-008589935961" fetched from FMC.
-2017/10/05-15:40:40 - INFO:api_objects.py:2439 - Adding "Port_tcp_123" to destinationPorts for this ACPRule.
-2017/10/05-15:40:40 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:40 - INFO:api_objects.py:2487 - Adding "obj-Host-689" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:40 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:41 - INFO:api_objects.py:2484 - Adding "obj-Host-690" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:41 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:41 - INFO:api_objects.py:2484 - Adding "obj-Host-691" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:41 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:42 - INFO:api_objects.py:2529 - Adding "obj-10.1.1.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:40:42 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:42 - INFO:api_objects.py:2526 - Adding "obj-10.1.2.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:40:42 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:42 - INFO:api_objects.py:2526 - Adding "obj-10.1.3.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:40:44 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test1_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434433" created in FMC.
-2017/10/05-15:40:46 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test2" and id: "000C29F1-03E7-0ed3-0000-008589936032" created in FMC.
-2017/10/05-15:40:48 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test2" and id: "000C29F1-03E7-0ed3-0000-008589936032" fetched from FMC.
-2017/10/05-15:40:48 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:40:48 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:40:49 - INFO:api_objects.py:91 - POST success. Object with name: "Port_tcp_161" and id: "000C29F1-03E7-0ed3-0000-008589936130" created in FMC.
-2017/10/05-15:40:49 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:33, Gathered_Items:25
-2017/10/05-15:40:50 - INFO:api_objects.py:132 - GET success. Object with name: "Port_tcp_161" and id: "000C29F1-03E7-0ed3-0000-008589936130" fetched from FMC.
-2017/10/05-15:40:50 - INFO:api_objects.py:2439 - Adding "Port_tcp_161" to destinationPorts for this ACPRule.
-2017/10/05-15:40:50 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:50 - INFO:api_objects.py:2487 - Adding "obj-Host-689" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:50 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:51 - INFO:api_objects.py:2484 - Adding "obj-Host-690" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:51 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:51 - INFO:api_objects.py:2484 - Adding "obj-Host-691" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:51 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:51 - INFO:api_objects.py:2529 - Adding "obj-10.1.3.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:40:52 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test2_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434435" created in FMC.
-2017/10/05-15:40:54 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test3" and id: "000C29F1-03E7-0ed3-0000-008589936201" created in FMC.
-2017/10/05-15:40:56 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test3" and id: "000C29F1-03E7-0ed3-0000-008589936201" fetched from FMC.
-2017/10/05-15:40:56 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:40:56 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:40:57 - INFO:api_objects.py:91 - POST success. Object with name: "Port_tcp_80" and id: "000C29F1-03E7-0ed3-0000-008589936299" created in FMC.
-2017/10/05-15:40:57 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:34, Gathered_Items:25
-2017/10/05-15:40:58 - INFO:api_objects.py:132 - GET success. Object with name: "Port_tcp_80" and id: "000C29F1-03E7-0ed3-0000-008589936299" fetched from FMC.
-2017/10/05-15:40:58 - INFO:api_objects.py:2439 - Adding "Port_tcp_80" to destinationPorts for this ACPRule.
-2017/10/05-15:40:58 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:58 - INFO:api_objects.py:2487 - Adding "obj-10.1.3.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:40:58 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:59 - INFO:api_objects.py:2529 - Adding "obj-Host-689" to destinationNetworks for this ACPRule.
-2017/10/05-15:40:59 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:59 - INFO:api_objects.py:2526 - Adding "obj-Host-690" to destinationNetworks for this ACPRule.
-2017/10/05-15:40:59 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:40:59 - INFO:api_objects.py:2526 - Adding "obj-Host-691" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:00 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test3_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434437" created in FMC.
-2017/10/05-15:41:02 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test3" and id: "000C29F1-03E7-0ed3-0000-008589936201" fetched from FMC.
-2017/10/05-15:41:02 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:02 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:02 - ERROR:fmc.py:133 - Error in POST operation --> 400 Client Error: Bad Request for url: https://10.82.7.82/api/fmc_config/v1/domain/e276abec-e0f2-11e3-8169-6d9ed49b625f/object/protocolportobjects
-2017/10/05-15:41:02 - ERROR:fmc.py:134 - json_response -->	{'error': {'category': 'FRAMEWORK', 'messages': [{'description': '<html> The object name Port_tcp_161 already exists.<br><br> Enter a new name.<br></html>'}], 'severity': 'ERROR'}}
-2017/10/05-15:41:03 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:34, Gathered_Items:25
-2017/10/05-15:41:03 - INFO:api_objects.py:132 - GET success. Object with name: "Port_tcp_161" and id: "000C29F1-03E7-0ed3-0000-008589936130" fetched from FMC.
-2017/10/05-15:41:03 - INFO:api_objects.py:2439 - Adding "Port_tcp_161" to destinationPorts for this ACPRule.
-2017/10/05-15:41:03 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:03 - INFO:api_objects.py:2487 - Adding "obj-Host-689" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:03 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:03 - INFO:api_objects.py:2484 - Adding "obj-Host-690" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:03 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:04 - INFO:api_objects.py:2484 - Adding "obj-Host-691" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:04 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:04 - INFO:api_objects.py:2529 - Adding "obj-10.1.3.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:05 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test3_Rule2" and id: "000C29F1-03E7-0ed3-0000-000268434438" created in FMC.
-2017/10/05-15:41:07 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test4" and id: "000C29F1-03E7-0ed3-0000-008589936427" created in FMC.
-2017/10/05-15:41:09 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test4" and id: "000C29F1-03E7-0ed3-0000-008589936427" fetched from FMC.
-2017/10/05-15:41:09 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:09 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:09 - WARNING:fmcOrchV1.2.py:227 - No port configured for the rule: ACP_test4_Rule1 in line:access-list ACP_test4 extended deny tcp object-group insideNets object-group AllHosts
-2017/10/05-15:41:09 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:10 - INFO:api_objects.py:2487 - Adding "obj-10.1.1.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:10 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:10 - INFO:api_objects.py:2484 - Adding "obj-10.1.2.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:10 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:10 - INFO:api_objects.py:2484 - Adding "obj-10.1.3.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:10 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:10 - INFO:api_objects.py:2529 - Adding "obj-Host-689" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:10 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:11 - INFO:api_objects.py:2526 - Adding "obj-Host-690" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:11 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:11 - INFO:api_objects.py:2526 - Adding "obj-Host-691" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:12 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test4_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434440" created in FMC.
-2017/10/05-15:41:14 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test5" and id: "000C29F1-03E7-0ed3-0000-008589936578" created in FMC.
-2017/10/05-15:41:16 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test5" and id: "000C29F1-03E7-0ed3-0000-008589936578" fetched from FMC.
-2017/10/05-15:41:16 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:16 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:16 - WARNING:fmcOrchV1.2.py:199 - Configuration NOT SUPPORTED in line: access-list ACP_test5 extended permit object-group portGroup object-group insideNets object-group AllHosts
-2017/10/05-15:41:17 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test8" and id: "000C29F1-03E7-0ed3-0000-008589936675" created in FMC.
-2017/10/05-15:41:19 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test8" and id: "000C29F1-03E7-0ed3-0000-008589936675" fetched from FMC.
-2017/10/05-15:41:19 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:19 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:20 - INFO:api_objects.py:91 - POST success. Object with name: "Port_tcp_250" and id: "000C29F1-03E7-0ed3-0000-008589936773" created in FMC.
-2017/10/05-15:41:20 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:35, Gathered_Items:25
-2017/10/05-15:41:20 - INFO:api_objects.py:132 - GET success. Object with name: "Port_tcp_250" and id: "000C29F1-03E7-0ed3-0000-008589936773" fetched from FMC.
-2017/10/05-15:41:20 - INFO:api_objects.py:2439 - Adding "Port_tcp_250" to destinationPorts for this ACPRule.
-2017/10/05-15:41:20 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:21 - INFO:api_objects.py:2487 - Adding "obj-10.1.1.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:21 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:21 - INFO:api_objects.py:2529 - Adding "obj-10.1.2.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:22 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test8_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434443" created in FMC.
-2017/10/05-15:41:24 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test8" and id: "000C29F1-03E7-0ed3-0000-008589936675" fetched from FMC.
-2017/10/05-15:41:24 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:24 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:24 - WARNING:fmcOrchV1.2.py:227 - No port configured for the rule: ACP_test8_Rule2 in line:access-list ACP_test8 extended permit tcp object obj-10.1.1.0 object obj-10.1.2.0 eq domain
-2017/10/05-15:41:24 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:25 - INFO:api_objects.py:2487 - Adding "obj-10.1.1.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:25 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:25 - INFO:api_objects.py:2529 - Adding "obj-10.1.2.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:26 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test8_Rule2" and id: "000C29F1-03E7-0ed3-0000-000268434444" created in FMC.
-2017/10/05-15:41:29 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test9" and id: "000C29F1-03E7-0ed3-0000-008589936898" created in FMC.
-2017/10/05-15:41:30 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test9" and id: "000C29F1-03E7-0ed3-0000-008589936898" fetched from FMC.
-2017/10/05-15:41:31 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:31 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:31 - WARNING:fmcOrchV1.2.py:199 - Configuration NOT SUPPORTED in line: access-list ACP_test9 extended deny object-group dmz-rule-945-services object-group gnet-intern object-group dmz-new-rule-983-dst log
-2017/10/05-15:41:32 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test11" and id: "000C29F1-03E7-0ed3-0000-008589936995" created in FMC.
-2017/10/05-15:41:33 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test11" and id: "000C29F1-03E7-0ed3-0000-008589936995" fetched from FMC.
-2017/10/05-15:41:34 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
-2017/10/05-15:41:34 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
-2017/10/05-15:41:34 - WARNING:fmcOrchV1.2.py:227 - No port configured for the rule: ACP_test11_Rule1 in line:access-list ACP_test11 extended permit udp object obj-10.1.1.0 object obj-10.1.2.0 range 6000 9000 inactive
-2017/10/05-15:41:34 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:34 - INFO:api_objects.py:2487 - Adding "obj-10.1.1.0" to sourceNetworks for this ACPRule.
-2017/10/05-15:41:34 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
-2017/10/05-15:41:35 - INFO:api_objects.py:2529 - Adding "obj-10.1.2.0" to destinationNetworks for this ACPRule.
-2017/10/05-15:41:36 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test11_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434447" created in FMC.
-2017/10/05-15:41:37 - INFO:fmc.py:214 - Waiting 15 seconds to allow the FMC to update the list of deployable devices.
-2017/10/05-15:41:52 - INFO:fmc.py:216 - Getting a list of deployable devices.
-2017/10/05-15:41:53 - INFO:fmc.py:242 - No devices need deployed.
+2017/10/10-11:51:58 - INFO:fmc.py:310 - Requesting new tokens from https://10.82.7.82/api/fmc_platform/v1/auth/generatetoken.
+2017/10/10-11:52:02 - INFO:fmc.py:89 - Building base to URLs.
+2017/10/10-11:52:02 - INFO:fmc.py:168 - Collecting version information from FMC.
+2017/10/10-11:52:02 - INFO:fmc.py:175 - Populating vdbVersion, sruVersion, serverVersion, and geoVersion FMC instance variables.
+2017/10/10-11:52:02 - INFO:fmcOrchV1.2.py:355 - FMC Connection was successful.
+2017/10/10-11:52:03 - INFO:api_objects.py:91 - POST success. Object with name: "obj-10.1.1.0" and id: "000C29F1-03E7-0ed3-0000-008589948638" created in FMC.
+2017/10/10-11:52:04 - INFO:api_objects.py:91 - POST success. Object with name: "obj-Host-689" and id: "000C29F1-03E7-0ed3-0000-008589948656" created in FMC.
+2017/10/10-11:52:04 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:04 - INFO:api_objects.py:406 - Adding "obj-Host-689" to NetworkGroup.
+2017/10/10-11:52:06 - INFO:api_objects.py:91 - POST success. Object with name: "AllHosts" and id: "000C29F1-03E7-0ed3-0000-008589948674" created in FMC.
+2017/10/10-11:52:06 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:06 - INFO:api_objects.py:406 - Adding "obj-10.1.1.0" to NetworkGroup.
+2017/10/10-11:52:06 - INFO:api_objects.py:91 - POST success. Object with name: "insideNets" and id: "000C29F1-03E7-0ed3-0000-008589948692" created in FMC.
+2017/10/10-11:52:08 - INFO:api_objects.py:91 - POST success. Object with name: "TCP_6100" and id: "000C29F1-03E7-0ed3-0000-008589948710" created in FMC.
+2017/10/10-11:52:09 - INFO:api_objects.py:91 - POST success. Object with name: "TCP_1414" and id: "000C29F1-03E7-0ed3-0000-008589948728" created in FMC.
+2017/10/10-11:52:09 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:09 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:31, Gathered_Items:25
+2017/10/10-11:52:10 - INFO:api_objects.py:2080 - Adding "TCP_6100" to ProtocolPortObjectGroups.
+2017/10/10-11:52:10 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:11 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:31, Gathered_Items:25
+2017/10/10-11:52:11 - INFO:api_objects.py:2077 - Adding "TCP_1414" to ProtocolPortObjectGroups.
+2017/10/10-11:52:11 - INFO:api_objects.py:91 - POST success. Object with name: "services_dmz" and id: "000C29F1-03E7-0ed3-0000-008589948746" created in FMC.
+2017/10/10-11:52:12 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test1" and id: "000C29F1-03E7-0ed3-0000-008589948763" created in FMC.
+2017/10/10-11:52:14 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test1" and id: "000C29F1-03E7-0ed3-0000-008589948763" fetched from FMC.
+2017/10/10-11:52:14 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
+2017/10/10-11:52:14 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
+2017/10/10-11:52:15 - INFO:api_objects.py:91 - POST success. Object with name: "Port_tcp_123" and id: "000C29F1-03E7-0ed3-0000-008589948861" created in FMC.
+2017/10/10-11:52:17 - INFO:fmc.py:147 - Paging:  Offset:0, Limit:25, Count:32, Gathered_Items:25
+2017/10/10-11:52:17 - INFO:api_objects.py:132 - GET success. Object with name: "Port_tcp_123" and id: "000C29F1-03E7-0ed3-0000-008589948861" fetched from FMC.
+2017/10/10-11:52:17 - INFO:api_objects.py:2439 - Adding "Port_tcp_123" to destinationPorts for this ACPRule.
+2017/10/10-11:52:17 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:17 - INFO:api_objects.py:2487 - Adding "obj-Host-689" to sourceNetworks for this ACPRule.
+2017/10/10-11:52:17 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:17 - INFO:api_objects.py:2529 - Adding "obj-10.1.1.0" to destinationNetworks for this ACPRule.
+2017/10/10-11:52:28 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test1_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434527" created in FMC.
+2017/10/10-11:52:31 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test5" and id: "000C29F1-03E7-0ed3-0000-008589948932" created in FMC.
+2017/10/10-11:52:32 - INFO:api_objects.py:132 - GET success. Object with name: "ACP_test5" and id: "000C29F1-03E7-0ed3-0000-008589948932" fetched from FMC.
+2017/10/10-11:52:33 - INFO:api_objects.py:132 - GET success. Object with name: "Default-Set" and id: "76fa83ea-c972-11e2-8be8-8e45bb1343c0" fetched from FMC.
+2017/10/10-11:52:33 - INFO:api_objects.py:2255 - VariableSet set to "Default-Set" for this ACPRule object.
+2017/10/10-11:52:33 - WARNING:fmcOrchV1.2.py:261 - No single port configured for the rule: ACP_test5_Rule1 in line:access-list ACP_test5 extended permit object-group services_dmz object-group insideNets object-group AllHosts
+2017/10/10-11:52:33 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:33 - INFO:api_objects.py:2572 - Adding "services_dmz" to ACPRule.
+2017/10/10-11:52:33 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:33 - WARNING:api_objects.py:2474 - Network "insideNets" is not found in FMC.  Cannot add to sourceNetworks.
+2017/10/10-11:52:33 - INFO:api_objects.py:142 - GET query for object with no name or id set.  Returning full list of these object types instead.
+2017/10/10-11:52:33 - WARNING:api_objects.py:2516 - Network "AllHosts" is not found in FMC.  Cannot add to destinationNetworks.
+2017/10/10-11:52:44 - INFO:api_objects.py:91 - POST success. Object with name: "ACP_test5_Rule1" and id: "000C29F1-03E7-0ed3-0000-000268434529" created in FMC.
+2017/10/10-11:52:45 - ERROR:fmcOrchV1.2.py:323 - Configuration NOT SUPPORTED in line: 
+2017/10/10-11:52:45 - ERROR:fmcOrchV1.2.py:323 - Configuration NOT SUPPORTED in line: 
+2017/10/10-11:52:45 - INFO:fmc.py:214 - Waiting 15 seconds to allow the FMC to update the list of deployable devices.
+2017/10/10-11:53:00 - INFO:fmc.py:216 - Getting a list of deployable devices.
+2017/10/10-11:53:01 - INFO:fmc.py:242 - No devices need deployed.
 
 

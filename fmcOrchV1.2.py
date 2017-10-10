@@ -62,7 +62,7 @@ def doPost():
     while 1:
 
         line = line.strip()
-        print (line)
+        #print ("Migrating.. "+line)
 
         if (line.startswith("#")) :
             needNext = 1
@@ -155,6 +155,39 @@ def doPost():
 
             needNext = 1
 
+        elif (line.startswith("object-group service")):
+
+            try:
+                nameSplit = line.split(" ")
+                objname = nameSplit[2].strip()  # Name of the group
+            except:
+                logger.error("MIGRATION NOT SUPPORTED in line: " + line.strip())
+                exit()
+
+            obj1 = ProtocolPortObjectGroups(fmc=fmc1, name=objname)
+            line = myfile.readline()
+
+            while line.startswith(" "):  # read the file until you encounter next set of configs.
+
+                if line.startswith(" service-object"):
+
+                    portSplits = line.split(" ")
+
+                    if portSplits[2] != "object":
+                        logger.error("MIGRATION NOT SUPPORTED in line: " + line)
+                    else:
+                        portName = portSplits[3].strip()
+                        obj1.named_ProtocolPortObjectGroups(action='add',name=portName)
+
+                else:
+                    logger.error("MIGRATION NOT SUPPORTED in line: " + line.strip())
+
+                line = myfile.readline()
+
+            needNext = 0
+            obj1.post()
+            del obj1
+
         elif (line.startswith("access-list")):
 
             try:
@@ -187,7 +220,7 @@ def doPost():
                 acprule1.name = acp1.name + "_Rule"+str(rulNum)
                 rulNum = rulNum+1
                 map = {"permit":"ALLOW", "deny":"BLOCK"}
-                protocolList = ["tcp","udp","icmp","ip"]
+                protocolList = ["tcp","udp","icmp","ip","object-group"]
 
                 try:
                     if(lineSplits[3].strip() == "deny" or lineSplits[3].strip() == "permit"):
@@ -219,23 +252,33 @@ def doPost():
                                 pport1 = ProtocolPort(fmc=fmc1, name="Port_"+lineSplits[4].strip() +"_"+portVal, port=portVal, protocol=lineSplits[4].strip() )
                                 portNum = portNum+1
                                 pport1.post()
+                                time.sleep(2)
                                 acprule1.destination_port(action='add', name=pport1.name)
                             else:
                                 raise Exception ("Configure port manually")
 
                         except:
-                            logger.warning("No port configured for the rule: "+acprule1.name+ " in line:"+line.strip())
+                            logger.warning("No single port configured for the rule: "+acprule1.name+ " in line:"+line.strip())
+
+                        #If config contains port gourp adjust source and destination hosts/network position indices.
+                        if lineSplits[4].strip() == "object-group":
+                            srcIndex = 7
+                            dstIndex = 9
+                            acprule1.named_ProtocolPortObjectGroups(action='add',name = lineSplits[5].strip())
+                        else:
+                            srcIndex = 6
+                            dstIndex = 8
 
                         try:
 
                             if(lineSplits[5].strip() == "object-group"):
 
-                                tempList = groupMap [lineSplits[6].strip()]
+                                tempList = groupMap [lineSplits[srcIndex].strip()]
                                 for i in tempList:
                                     acprule1.source_network(action='add',name=i)
 
                             else:
-                                acprule1.source_network(action='add',name=lineSplits[6].strip())
+                                acprule1.source_network(action='add',name=lineSplits[srcIndex].strip())
 
                         except:
                             logger.warning("No source network configured for the rule: "+acprule1.name+" in line: "+line.strip())
@@ -244,11 +287,11 @@ def doPost():
 
                             if(lineSplits[7].strip() == "object-group"):
 
-                                tempList = groupMap [lineSplits[8].strip()]
+                                tempList = groupMap [lineSplits[dstIndex].strip()]
                                 for i in tempList:
                                     acprule1.destination_network(action='add',name=i)
                             else:
-                                acprule1.destination_network(action='add',name=lineSplits[8].strip())
+                                acprule1.destination_network(action='add',name=lineSplits[dstIndex].strip())
 
                         except:
                             logger.warning("No destination network configured for the rule: "+acprule1.name+" in line: "+line.strip())
@@ -258,7 +301,7 @@ def doPost():
 
                         if (lineSplits[-1].strip() == "log" or lineSplits[-2].strip() == "log"):
                             acprule1.sendEventsToFMC = True
-
+                        time.sleep(10)
                         acprule1.post()
                         time.sleep(1)
 
@@ -275,62 +318,6 @@ def doPost():
                 else:
                     needNext = 0
                     break
-
-        elif (line.startswith("object-group service")):
-
-            try:
-                nameSplit = line.split(" ")
-                objname = nameSplit[2].strip()  # Name of the group
-            except:
-                logger.error("Configuration file error in line: " + line.strip())
-                exit()
-
-            obj1 = ProtocolPortObjectGroups(fmc=fmc1, name=objname)
-            line = myfile.readline()
-
-           # if nameSplit.count() == 4:
-               # portType = nameSplit[3].strip()
-            i=0
-            while line.startswith(" "):  # read the file until you encounter next set of configs.
-                #entrySplits = line.split(" ")
-
-                if line.startswith(" group-object"):
-
-                    logger.error("group-object configuration under " + objname + " is NOT SUPPORTED in line: " + line.strip())
-                    line = myfile.readline()
-                    continue
-
-                if line.startswith(" service-object"):
-
-                    portSplits = line.split(" ")
-                    portName = portSplits[3].strip()
-                    obj1.named_ProtocolPortObjectGroups(action='add',name=portName)
-
-                if line.startswith(" port-object"):
-
-                    portSplits = line.split(" ")
-                    portVal = portSplits[3].strip()
-
-                    if portVal.isdigit():
-
-                        obj2 = ProtocolPort(fmc=fmc1)
-                        obj2.name = objname + i
-                        obj2.port = portVal
-                        #obj2.protocol = portType
-                        obj2.post()
-                        i = i+1
-                        time.sleep()
-                        obj1.named_ProtocolPortObjectGroups(action='add', name=obj2.name)
-
-                    else:
-
-                        logger.error("CONFIGURATION NOT SUPPORTED for line: "+line)
-
-                line = myfile.readline()
-
-            needNext = 0
-            obj1.post()
-            del obj1
 
         else:
             logger.error("Configuration NOT SUPPORTED in line: "+line.strip())
